@@ -1,0 +1,24 @@
+version: "3"
+services: 
+  web: 
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "4444:3000"
+    volumes:
+      - /app/node_modules
+      - .:/app
+    restart: always
+  tests: 
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: ['npm','run','test']
+    volumes: 
+     - /app/node_modules
+     - .:/app   
