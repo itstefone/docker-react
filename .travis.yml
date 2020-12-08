@@ -19,5 +19,9 @@ script:
     env: "Docker-env"
     bucket_name: "elasticbeanstalk-eu-central-1-641874005858"
     bucket_path: "Docker"
-    on: 
-       branch: master
+    
+    
+    
+    
+on: 
+  branch: master
