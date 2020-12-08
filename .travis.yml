@@ -13,7 +13,7 @@ deploy:
     access_key_id:
       secure: "$AWS_ACCESS_KEY"
     secret_access_key:
-      secure: "$AWS_SECRET_KEY"
+      secure: "$AWE_SECRET_KEY"
     region: "eu-central-1"
     app: "Docker"
     env: "Docker-env"
