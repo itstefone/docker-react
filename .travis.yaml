@@ -1,0 +1,9 @@
+sudo: required
+services: 
+    - docker
+
+before_install: 
+  - docker build -t itstefone/docker-react .
+
+script: 
+  - docker run itstefone/docker-react npm run test -- --coverage
